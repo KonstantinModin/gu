@@ -3,29 +3,6 @@ import { useLocation } from 'react-router-dom';
 
 import lang from './img/lang.png';
 
-// ----------------------------------------------------------------
-// remove before build
-
-const delta = 1;
-
-const encode = (obj) =>
-  JSON.stringify(obj).split``.map((char) =>
-    String.fromCharCode(char.charCodeAt() - delta)
-  ).join``;
-
-const konst = {
-  d: 1523,
-  t: '01.12.2022',
-  n: 'Konstantin Modin',
-  b: '13.01.1984',
-  z: 'Y3-082J',
-  p: '72-266',
-};
-console.log('encode(konst)\n', encode(konst));
-
-// remove before build
-// ----------------------------------------------------------------
-
 const decode = (str) =>
   JSON.parse(
     decodeURI(str).split``.map((char) =>
